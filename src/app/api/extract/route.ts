@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
     // Initialize Google Gemini AI
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
     const prompt = `You are a receipt OCR system. Extract all relevant information from this receipt image and return it as a structured JSON object with the following fields:
 - merchant_name: The name of the store/merchant
